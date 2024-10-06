@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(252, 241, 231);
+    text-align: left;
+}
+
+.navbar {
+    background-color: rgb(251, 203, 203);
+}
+
+a {
+    color: black;
+}
+
+.text-color {
+    color: black;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0;
+    padding-left: 20px; /* Adiciona espaço à esquerda da timeline */
+}
+
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 100%;
+    margin-left: 0;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 20px; /* Ajusta o círculo mais para dentro da timeline */
+    background-color: white;
+    border: 4px solid black;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    background-color: black;
+    top: 0;
+    left: 32px; /* Ajusta a linha para alinhar com o círculo */
+    z-index: -1;
+}
+
+.container:last-child::before {
+    height: 15px;
+}
+
+
+.content {
+    padding: 20px;
+    background-color: rgb(252, 241, 231);
+    position: relative;
+    border-radius: 6px;
+    text-align: left;
+    width: 80%;
+    margin-left: 80px; /* Distancia o texto e as imagens da linha da timeline */
+}
+
+.img-container {
+    display: flex; /* Exibe os itens em linha */
+    justify-content: space-around; /* Distribui o espaço entre os itens */
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte se não houver espaço */
+}
+
+.img-item {
+    margin: 10px; /* Espaço entre os itens */
+    text-align: center; /* Centraliza o texto em cada item */
+    flex: 1; /* Permite que os itens cresçam igualmente */
+    min-width: 150px; /* Define uma largura mínima para os itens */
+}
+
+.img-class2 {
+    width: 100%; /* Ajusta a largura da imagem para ocupar o espaço disponível */
+    height: auto; /* Mantém a proporção */
+    border-radius: 5px; /* Borda arredondada */
+}
+
+
+h2 {
+    color: black;
+    text-align: left;
+}
+
+.img-class {
+    width: 600px; /* Definindo uma largura padrão */
+    height: 400px; /* Definindo uma altura padrão */
+    object-fit: contain;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+/* Estilos de cor de fundo */
+.container-rosa {
+    padding-top: 40px;
+    padding-bottom: 6rem;
+    background-color: rgb(251, 203, 203);
+    text-align: left;
+}
+
+.container-black {
+    padding-top: 100px;
+    padding-bottom: 6rem;
+    background-color: rgb(252, 241, 231);
+    text-align: left;
+}
+
+hr.star-light {
+    max-width: 15rem;
+    padding: 0px 0.25em;
+    text-align: left;
+    border: none;
+    border-top: solid 0.25rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    margin-left: 0;
+    border-color: black;
+}
+
+hr.star-light:after {
+    position: relative;
+    top: -.8em;
+    display: inline-block;
+    padding: 0px 0.25em;
+    content: "★";
+    font-family: FontAwesome;
+    font-size: 2em;
+    color: black;
+    background-color: rgb(252, 241, 231);
+}
+
+.center-frame {
+    margin: 0;
+    width: 100%;
+}
